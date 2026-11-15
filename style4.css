@@ -158,20 +158,37 @@ img {
 @media screen and (max-width: 768px) {
 
     .main {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row-reverse;
+        padding: 10px 0;
         gap: 10px;
+		margin:15px auto;
+		width:96%;
     }
 
-    .content,
+    .content{
+		width:65%;
+		padding:10px;
+		font-size:13px;
+	}
     .menu {
-        width: 100%;
-        padding: 18px;
-        margin: 5px 0;
+        width: 35%;
+        padding: 10px;
     }
-
+	.menu ul{
+		display:blok;
+	}
+.menu li{
+	margin:8px 0
+}
+	.menu a:link,
+	.menu a:visited{
+		font-size:12px;
+		padding:10px 5px
+	}
+}
     .header {
         height: 220px;
+		border-radius:0 0 20px 20px;
     }
 
     .content h2 {
