@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نمونه سوالات</title>
+	<style>
+
+@charset "utf-8";
+
+/* فونت و تنظیمات کلی سایت */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-style: normal;
+    direction: rtl;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #F8F1E9;
+    color: #382923;
+}
+
+/* هدر سایت */
+.header {
+    width: 100%;
+    height: clamp(250px, 35vw, 550px);
+    background-image: url("banner.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 30px 30px;
+    border-bottom: 5px solid #B98279;
+    box-shadow: 0 5px 18px rgba(64, 37, 31, 0.15);
+}
+
+/* بخش اصلی سایت */
+.main {
+    direction: rtl;
+    width: 94%;
+    max-width: 1400px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 10px 0;
+    flex: 1;
+    flex-direction: row-reverse;
+}
+
+/* کادر محتوا */
+.content {
+    background-color: #fffdf9;
+    width: 70%;
+    min-width: 0;
+    min-height: 450px;
+    padding: 35px;
+    margin: 0;
+    text-align: justify;
+    font-size: 17px;
+    color: #66534b;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(64, 37, 31, 0.08);
+    line-height: 2.3;
+    border: 1px solid #E8D8CC;
+    transition: all 0.3s ease;
+}
+
+/* عنوان های محتوا */
+.content h1,
+.content h2,
+.content h3 {
+    color: #763D4E;
+    border-right: 6px solid #B98279;
+    padding-right: 18px;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 0 0 25px;
+    line-height: 1.8;
+}
+
+/* متن های محتوا */
+.content p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-align: justify;
+    word-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+/* تصاویر */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
+}
+
+/* منوی کناری */
+.menu {
+    width: 30%;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, #F0D9D9, #E8C7C9);
+    min-height: 430px;
+    padding: 22px;
+    margin: 0;
+    font-size: 17px;
+    border-radius: 22px;
+    box-shadow: 0 5px 18px rgba(64, 37, 31, 0.08);
+    border: 1px solid #DDB9B9;
+    transition: 0.3s ease;
+}
+
+/* لیست منو */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 12px 0;
+}
+
+/* دکمه های منو */
+.menu a:link,
+.menu a:visited {
+    background: linear-gradient(135deg, #76534B, #382923);
+    color: #fff7f0;
+    padding: 16px 12px;
+    display: block;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.15);
+    letter-spacing: 0.3px;
+}
+
+/* افکت حرکت منو */
+.menu a:hover {
+    background: linear-gradient(135deg, #B98279, #E8C7C9);
+    color: #382923;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 15px rgba(64, 37, 31, 0.2);
+}
+
+/* لینک های داخل محتوا */
+.content a:link,
+.content a:visited {
+    background: linear-gradient(135deg, #76534B, #593943);
+    color: #fff7f0;
+    padding: 14px 18px;
+    display: block;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+/* افکت لینک های محتوا */
+.content a:hover {
+    background: linear-gradient(135deg, #B98279, #E8C7C9);
+    color: #382923;
+    transform: translateX(-4px);
+    box-shadow: 0 5px 14px rgba(64, 37, 31, 0.15);
+}
+
+/* فوتر سایت */
+.footer {
+    width: 100%;
+    min-height: 95px;
+    margin-top: auto;
+    padding: 22px 15px;
+    line-height: 2;
+    text-align: center;
+    background: linear-gradient(135deg, #382923, #593943, #76534B);
+    font-size: 16px;
+    color: #F8E8D6;
+    border-top: 4px solid #B98279;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -5px 20px rgba(64, 37, 31, 0.12);
+}
+
+/* متن داخل فوتر */
+.footer p {
+    margin: 5px 0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* افکت فوتر */
+.footer:hover {
+    box-shadow: 0 -8px 25px rgba(64, 37, 31, 0.18);
+}
+
+/* نمایش در تبلت */
+@media screen and (max-width: 992px) {
+
+    .main {
+        width: 96%;
+        gap: 15px;
+    }
+
+    .menu {
+        width: 32%;
+        padding: 15px;
+    }
+
+    .content {
+        width: 68%;
+        padding: 25px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+}
+
+/* نمایش در موبایل */
+@media screen and (max-width: 768px) {
+
+    .header {
+        height: 220px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .main {
+        width: 94%;
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 15px;
+        margin: 15px auto;
+    }
+
+    .content,
+    .menu {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+        margin: 0;
+        border-radius: 18px;
+    }
+
+    /* نمایش منو در دو ستون */
+    .menu ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a:link,
+    .menu a:visited {
+        font-size: 14px;
+        padding: 14px 7px;
+    }
+
+    .content h1,
+    .content h2,
+    .content h3 {
+        font-size: 22px;
+    }
+
+    .content p {
+        font-size: 15px;
+        line-height: 2.2;
+    }
+
+    .content a {
+        font-size: 15px;
+        padding: 13px 10px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 20px 10px;
+        min-height: 80px;
+        border-radius: 18px 18px 0 0;
+    }
+}
+
+/* موبایل های کوچک */
+@media screen and (max-width: 380px) {
+
+    .menu ul {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+}
+
+/* کاهش انیمیشن برای افرادی که ترجیح می دهند */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+		
+.field-section {
+    background: #fff8f0;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    border: 2px solid #ead5c5;
+}
+
+.field-section h2 {
+    color: #754c35;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.question-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: right;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+.question-card h3 {
+    color: #65452f;
+}
+
+.question-card p {
+    color: #777;
+}
+
+.pdf-btn {
+    display: inline-block;
+    background: #9b665d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.pdf-btn:hover {
+    background: #75483f;
+}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="header"></div>
+	<div class="main">
+		<div class="content">
+			<h2>نمونه سوالات:</h2>
+			
+
+<div class="field-section">
+    <h2>👶 رشته تربیت کودک</h2>
+
+    <div class="question-card">
+        <h3>🧪 شیمی</h3>
+        <p>نمونه سؤالات شیمی پایه یازدهم رشته تربیت کودک</p>
+        <a href="riazi11fani-session3-4.pdf" target="_blank" class="pdf-btn">
+            مشاهده نمونه سؤال
+        </a>
+	</div>
+			</div>
+<div class="field-section">
+    <h2>📷 رشته فتوگرافیک</h2>
+
+    <div class="question-card">
+        <h3>⚡ فیزیک</h3>
+        <p>نمونه سؤالات فیزیک پایه دهم رشته فتوگرافیک</p>
+        <a href="physicfani-session3-1.pdf" target="_blank" class="pdf-btn">
+            مشاهده نمونه سؤال
+        </a>
+	</div>
+			</div>
+<div class="field-section">
+	<h2>💻 رشته کامپیوتر</h2>
+    <div class="question-card">
+        <h3>📖 دینی</h3>
+        <p>نمونه سؤالات دین و زندگی پایه یازدهم رشته کامپیوتر</p>
+        <a href="dini11-term1403-1.pdf" target="_blank" class="pdf-btn">
+            مشاهده نمونه سؤال
+        </a>
+    </div>	
+			</div>
+		</div>
+		<div class="menu">
+			<ul>
+		<li> <a href="index.html">صفحه اصلی</a></li>
+		<li> <a href="moarefi.html">معرفی هنرستان</a></li>
+		<li> <a href="reshteh.html">معرفی رشته ها</a></li>
+		<li><a href="galeri.html">گالری تصاویر</a></li>
+		<li><a href="Sample Questions.html">نمونه سوال</a></li>
+		<li><a href="about.html">تماس با ما</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+	<p>هنرستان حاتمی ورزنه | تمامی حقوق محفوظ است</p>
+
+	</div>
+</body>
+</html>

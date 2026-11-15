@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تماس با ما</title>
+	<style>
+		
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    direction: rtl;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #F8F1E9;
+    color: #382923;
+}
+
+.header {
+    width: 100%;
+    height: clamp(250px, 35vw, 550px);
+    background-image: url("banner.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 0 30px 30px;
+    border-bottom: 5px solid #B98279;
+    box-shadow: 0 5px 18px rgba(64, 37, 31, 0.15);
+}
+.main {
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 1%;
+    padding: 20px;
+    flex: 1;
+    flex-direction: row-reverse;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.content {
+    background: linear-gradient(145deg, #fffdf9, #fff8f5);
+    width: 70%;
+    min-height: 450px;
+    padding: 40px;
+    margin: 15px 0;
+    text-align: justify;
+    font-size: 17px;
+    color: #66534b;
+    border-radius: 25px;
+    border: 1px solid #E8D8CC;
+    border-top: 5px solid #B98279;
+    box-shadow: 0 8px 25px rgba(64, 37, 31, 0.09);
+    line-height: 2.5;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* افکت حرکت محتوا */
+
+.content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 13px 30px rgba(64, 37, 31, 0.14);
+}
+
+/* عنوان اصلی محتوا */
+
+.content h2 {
+    color: #763D4E;
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 12px 18px;
+    border-right: 6px solid #B98279;
+    background: linear-gradient(to left, #F8E8E6, transparent);
+    border-radius: 8px;
+}
+
+/* عنوان های فرعی */
+
+.content h3 {
+    color: #8B6255;
+    font-size: 21px;
+    font-weight: 700;
+    border-bottom: 2px solid #E8C7C9;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* متن های داخل محتوا */
+
+.content p {
+    font-size: 17px;
+    color: #66534b;
+    line-height: 2.6;
+    text-align: justify;
+    word-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* تصاویر داخل محتوا */
+
+.content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(64, 37, 31, 0.13);
+    transition: 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.02);
+}
+
+/* فهرست داخل محتوا */
+
+.content ul {
+    padding-right: 25px;
+}
+
+.content li {
+    margin: 10px 0;
+    line-height: 2.2;
+}
+
+/* لینک های داخل محتوا */
+
+.content a {
+    color: #8B6255;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.content a:hover {
+    color: #B98279;
+}
+
+/* کارت های اطلاعاتی داخل محتوا */
+
+.content .info-card {
+    background: #FFF4F1;
+    border-right: 4px solid #B98279;
+    padding: 18px 22px;
+    margin: 18px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(64, 37, 31, 0.06);
+    transition: 0.3s ease;
+}
+
+.content .info-card:hover {
+    transform: translateX(-5px);
+    background: #FBE8E6;
+}
+
+
+
+.menu {
+    width: 29%;
+    background-color: #E8C7C9;
+    min-height: 430px;
+    padding: 22px;
+    margin-top: 15px;
+    font-size: 17px;
+    border-radius: 22px;
+    box-shadow: 0 5px 18px rgba(64, 37, 31, 0.08);
+    border: 1px solid #DDB9B9;
+    transition: 0.3s ease;
+}
+
+/* عنوان منو */
+
+.menu h2,
+.menu h3 {
+    color: #763D4E;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* لیست منو */
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 12px 0;
+}
+
+/* دکمه های منو */
+
+.menu a:link,
+.menu a:visited {
+    background: linear-gradient(135deg, #76534B, #382923);
+    color: #fff7f0;
+    padding: 17px;
+    display: block;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.15);
+    letter-spacing: 0.3px;
+}
+
+/* افکت دکمه های منو */
+
+.menu a:hover {
+    background: linear-gradient(135deg, #B98279, #E8C7C9);
+    color: #382923;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 15px rgba(64, 37, 31, 0.2);
+}
+
+/* دسترسی با صفحه کلید */
+
+.menu a:focus-visible {
+    outline: 3px solid #763D4E;
+    outline-offset: 3px;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+.footer {
+    width: 100%;
+    min-height: 100px;
+    margin-top: auto;
+    padding: 25px 15px;
+    line-height: 2;
+    text-align: center;
+    background: linear-gradient(135deg, #382923, #593943, #76534B);
+    font-size: 16px;
+    color: #F8E8D6;
+    border-top: 4px solid #B98279;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -5px 20px rgba(64, 37, 31, 0.12);
+    transition: 0.3s ease;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.footer:hover {
+    box-shadow: 0 -8px 25px rgba(64, 37, 31, 0.18);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .main {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .content,
+    .menu {
+        width: 100%;
+        padding: 20px;
+        margin: 5px 0;
+    }
+
+    .header {
+        height: 220px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .content h2 {
+        font-size: 22px;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+    .menu {
+        min-height: auto;
+    }
+
+    .menu a:link,
+    .menu a:visited {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 20px 10px;
+        min-height: 85px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .content {
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 19px;
+    }
+
+    .content h3 {
+        font-size: 17px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .menu {
+        padding: 15px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+}
+
+		
+	</style>
+</head>
+
+<body>
+	<div class="header"></div>
+	<div class="main">
+		<div class="content">
+			
+<h2>ارتباط با هنرستان حاتمی</h2>
+
+<p>
+ما در هنرستان حاتمی ورزنه همواره تلاش می‌کنیم
+ارتباطی صمیمانه و سازنده با دانش‌آموزان،
+والدین و علاقه‌مندان به آموزش برقرار کنیم.
+شما می‌توانید برای دریافت اطلاعات درباره رشته‌های
+تحصیلی، شرایط ثبت‌نام و برنامه‌های آموزشی
+از راه‌های ارتباطی زیر با ما در تماس باشید.
+</p>
+
+<div class="info-card">
+    <h3>📞 راه‌های ارتباطی</h3>
+    <p>
+    تلفن: 09964586544
+    </p>
+    <p>
+    ایمیل: info@honarestan.ir
+    </p>
+</div>
+
+<div class="info-card">
+    <h3>📍 نشانی هنرستان</h3>
+    <p>
+    ورزنه، خیابان عالم، هنرستان حاتمی
+    </p>
+</div>
+
+<div class="info-card">
+    <h3>🕒 ساعات پاسخگویی</h3>
+    <p>
+    شنبه تا چهارشنبه، ساعت ۸ تا ۱۴
+    </p>
+</div>
+
+<p>
+از اینکه هنرستان حاتمی را برای ارتباط و کسب اطلاعات
+انتخاب کرده‌اید سپاسگزاریم. 🌷
+</p>
+
+
+
+
+
+
+				
+
+				
+		</div>
+		<div class="menu">
+			<ul>
+		<li> <a href="index.html">صفحه اصلی</a></li>
+		<li> <a href="moarefi.html">معرفی هنرستان</a></li>
+		<li> <a href="reshteh.html">معرفی رشته ها</a></li>
+		<li><a href="galeri.html">گالری تصاویر</a></li>
+		<li><a href="Sample Questions.html">نمونه سوال</a></li>
+		<li><a href="about.html">تماس با ما</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+			<p>هنرستان حاتمی ورزنه | تمامی حقوق محفوظ است</p>
+
+	</div>
+</body>
+</html>
